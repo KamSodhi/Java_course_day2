@@ -27,4 +27,19 @@ public class Rectangle extends Shape {
         else
             return false;
     }
+
+    @Override
+    public double getArea(){
+        return width*height;
+    }
+
+    @Override public Point getCentrePoint(){
+        double xPoint = getX();
+        double yPoint = getY();
+        double xCentre = xPoint + (width/2);
+        double yCentre = yPoint + (height/2);
+
+        return new Point (xCentre, yCentre);
+
+    }
 }
